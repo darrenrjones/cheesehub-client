@@ -2,13 +2,14 @@ import {
   FETCH_CHEESES_REQUEST,
   FETCH_CHEESES_SUCCESS,
   FETCH_CHEESES_ERROR,
+  SUBMIT_NEW_CHEESE
    
 } from '../actions/cheese';
 
 const initialState = {
   cheeses: [],
   loading: false,
-  error: null
+  error: null,
 };
 
 export default function cheeseReducer(state = initialState, action){
@@ -32,6 +33,12 @@ export default function cheeseReducer(state = initialState, action){
         ...state,
         loading: false,
         error: action.err.message,
+      }
+    case SUBMIT_NEW_CHEESE:
+      return {
+        ...state,
+        loading: false,
+        cheeses: [...state.cheeses,action.newCheese] 
       }
       default:
         return state
