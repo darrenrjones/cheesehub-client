@@ -1,0 +1,21 @@
+body {
+  background-image: url('OPDETC0.jpg');
+
+}
+
+h1 {
+  color: rgb(82, 9, 9);
+text-align: center;
+font-size: 3rem;
+}
+
+.ul {
+  border: 1px black solid;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+text-align: center;
+}

@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { fetchCheeses, postCheese } from '../actions/cheese';
 import { Field, reduxForm} from 'redux-form';
 import CheeseForm from './cheese-form';
+import './cheese-list.css';
 
 
 export class CheeseList extends React.Component{
@@ -16,12 +17,12 @@ export class CheeseList extends React.Component{
 
 render() {
   
-    let cheeseList = this.props.cheeses.map((cheese, i) => <li key={i}>{cheese}</li> )
+    let cheeseList = this.props.cheeses.map((cheese, i) => <li className='li' key={i}>{cheese}</li> )
    return(
     <div className='main-container'>
       <h1>Welcome to CheeseHub!</h1>
       <div className='cheese-list'>
-        <ul>
+        <ul className='ul'>
           {cheeseList}
         </ul>
       </div>
